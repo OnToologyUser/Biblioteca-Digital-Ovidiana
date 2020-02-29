@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "bdo:Date" "bdo:Printer" "bdo:ListOfEditionIllustrations" "bdo:ListOfThemes" "bdo:Subject" "bdo:Index" "bdo:Province" "bdo:PublicationPlace" "bdo:ListOfSpecimenIllustrations" "bdo:Illustrator" "bdo:Section" "foaf:Person" "bdo:SpecimenIllustration" "edm:ProvidedCHO" "bdo:ApproximateDate" "bdo:ExactDate" "bdo:Community" "skos:Concept" "bdo:Opus" "bdo:City" "http://schema.org/Place" "bdo:Illustration" "olo:Slot" "olo:OrderedList" ; /*classes style*/
+	"skos:Concept" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
+	"bdo:ExactDate" -> "bdo:Date" [ label = "rdfs:subClassOf" ];
+	"bdo:ListOfEditionIllustrations" -> "olo:OrderedList" [ label = "rdfs:subClassOf" ];
+	"bdo:Section" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
+	"bdo:Subject" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
+	"bdo:Opus" -> "edm:ProvidedCHO" [ label = "rdfs:subClassOf" ];
+	"olo:Slot" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"bdo:ListOfThemes" -> "olo:OrderedList" [ label = "rdfs:subClassOf" ];
+	"bdo:City" -> "http://schema.org/Place" [ label = "rdfs:subClassOf" ];
+	"bdo:Illustrator" -> "foaf:Person" [ label = "rdfs:subClassOf" ];
+	"olo:OrderedList" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"bdo:Index" -> "olo:OrderedList" [ label = "rdfs:subClassOf" ];
+	"bdo:ListOfSpecimenIllustrations" -> "bdo:ListOfEditionIllustrations" [ label = "rdfs:subClassOf" ];
+	"bdo:Illustration" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
+	"bdo:PublicationPlace" -> "http://schema.org/Place" [ label = "rdfs:subClassOf" ];
+	"bdo:SpecimenIllustration" -> "bdo:Illustration" [ label = "rdfs:subClassOf" ];
+	"bdo:Province" -> "http://schema.org/Place" [ label = "rdfs:subClassOf" ];
+	"bdo:Community" -> "http://schema.org/Place" [ label = "rdfs:subClassOf" ];
+	"bdo:Printer" -> "foaf:Person" [ label = "rdfs:subClassOf" ];
+	"bdo:ApproximateDate" -> "bdo:Date" [ label = "rdfs:subClassOf" ];
+
+}

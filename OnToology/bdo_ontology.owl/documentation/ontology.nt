@@ -1,0 +1,570 @@
+<http://bdovidiana.es/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bdovidiana.es/ontology> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/ontology/olo/core#> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rightsHolder
+<http://purl.org/dc/terms/rightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bdovidiana.es/ontology#areRepresentedIn
+<http://bdovidiana.es/ontology#areRepresentedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#areRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfThemes> .
+<http://bdovidiana.es/ontology#areRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Illustration> .
+# 
+# http://bdovidiana.es/ontology#city
+<http://bdovidiana.es/ontology#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#LibraryLocation> .
+<http://bdovidiana.es/ontology#city> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#City> .
+# 
+# http://bdovidiana.es/ontology#community
+<http://bdovidiana.es/ontology#community> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#community> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#LibraryLocation> .
+<http://bdovidiana.es/ontology#community> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Community> .
+# 
+# http://bdovidiana.es/ontology#contains
+<http://bdovidiana.es/ontology#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#slot> .
+<http://bdovidiana.es/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Index> .
+<http://bdovidiana.es/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Section> .
+# 
+# http://bdovidiana.es/ontology#correspondsTo
+<http://bdovidiana.es/ontology#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#SpecimenIllustration> .
+<http://bdovidiana.es/ontology#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Illustration> .
+# 
+# http://bdovidiana.es/ontology#geo
+<http://bdovidiana.es/ontology#geo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#geo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://bdovidiana.es/ontology#geo> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/GeoCoordinates> .
+# 
+# http://bdovidiana.es/ontology#hasEdition
+<http://bdovidiana.es/ontology#hasEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasEdition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Opus> .
+<http://bdovidiana.es/ontology#hasEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Edition> .
+# 
+# http://bdovidiana.es/ontology#hasIllustration
+<http://bdovidiana.es/ontology#hasIllustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasIllustration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#slot> .
+<http://bdovidiana.es/ontology#hasIllustration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfEditionIllustrations> .
+<http://bdovidiana.es/ontology#hasIllustration> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Illustration> .
+# 
+# http://bdovidiana.es/ontology#hasIllustrations
+<http://bdovidiana.es/ontology#hasIllustrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasIllustrations> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#hasIllustrations> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#ListOfEditionIllustrations> .
+# 
+# http://bdovidiana.es/ontology#hasIllustrator
+<http://bdovidiana.es/ontology#hasIllustrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasIllustrator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#hasIllustrator> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Illustrator> .
+# 
+# http://bdovidiana.es/ontology#hasImpresor
+<http://bdovidiana.es/ontology#hasImpresor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasImpresor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#hasImpresor> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Printer> .
+# 
+# http://bdovidiana.es/ontology#hasIndex
+<http://bdovidiana.es/ontology#hasIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#hasIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Index> .
+# 
+# http://bdovidiana.es/ontology#hasRelatedThemes
+<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#slot> .
+<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfThemes> .
+<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Subject> .
+# 
+# http://bdovidiana.es/ontology#hasSpecimen
+<http://bdovidiana.es/ontology#hasSpecimen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#hasSpecimen> <http://www.w3.org/2002/07/owl#inverseOf> <http://bdovidiana.es/ontology#isSpecimenOf> .
+<http://bdovidiana.es/ontology#hasSpecimen> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#hasSpecimen> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Specimen> .
+# 
+# http://bdovidiana.es/ontology#isEdition
+<http://bdovidiana.es/ontology#isEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isEdition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#isEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Opus> .
+# 
+# http://bdovidiana.es/ontology#isIllustratorOf
+<http://bdovidiana.es/ontology#isIllustratorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isIllustratorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Illustrator> .
+<http://bdovidiana.es/ontology#isIllustratorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Edition> .
+# 
+# http://bdovidiana.es/ontology#isInIllustrationList
+<http://bdovidiana.es/ontology#isInIllustrationList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isInIllustrationList> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#ordered_list> .
+<http://bdovidiana.es/ontology#isInIllustrationList> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Illustration> .
+<http://bdovidiana.es/ontology#isInIllustrationList> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#ListOfEditionIllustrations> .
+# 
+# http://bdovidiana.es/ontology#isInIndex
+<http://bdovidiana.es/ontology#isInIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isInIndex> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#ordered_list> .
+<http://bdovidiana.es/ontology#isInIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Section> .
+<http://bdovidiana.es/ontology#isInIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Index> .
+# 
+# http://bdovidiana.es/ontology#isInSubjectList
+<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#ordered_list> .
+<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Subject> .
+<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#ListOfThemes> .
+# 
+# http://bdovidiana.es/ontology#isListIllustrationOfSpecimen
+<http://bdovidiana.es/ontology#isListIllustrationOfSpecimen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isListIllustrationOfSpecimen> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#isListIllustrationsOf> .
+<http://bdovidiana.es/ontology#isListIllustrationOfSpecimen> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfSpecimenIllustrations> .
+<http://bdovidiana.es/ontology#isListIllustrationOfSpecimen> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Specimen> .
+# 
+# http://bdovidiana.es/ontology#isListIllustrationsOf
+<http://bdovidiana.es/ontology#isListIllustrationsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isListIllustrationsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfEditionIllustrations> .
+<http://bdovidiana.es/ontology#isListIllustrationsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Edition> .
+# 
+# http://bdovidiana.es/ontology#isLocatedIn
+<http://bdovidiana.es/ontology#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Library> .
+<http://bdovidiana.es/ontology#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#LibraryLocation> .
+# 
+# http://bdovidiana.es/ontology#isSpecimenOf
+<http://bdovidiana.es/ontology#isSpecimenOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#isSpecimenOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#isSpecimenOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Edition> .
+# 
+# http://bdovidiana.es/ontology#locatedIn
+<http://bdovidiana.es/ontology#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Library> .
+# 
+# http://bdovidiana.es/ontology#province
+<http://bdovidiana.es/ontology#province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#province> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#LibraryLocation> .
+<http://bdovidiana.es/ontology#province> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Province> .
+# 
+# http://bdovidiana.es/ontology#publicationDate
+<http://bdovidiana.es/ontology#publicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#publicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#publicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Date> .
+# 
+# http://bdovidiana.es/ontology#publishedIn
+<http://bdovidiana.es/ontology#publishedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#publishedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#publishedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#PublicationPlace> .
+# 
+# http://bdovidiana.es/ontology#representsThemes
+<http://bdovidiana.es/ontology#representsThemes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bdovidiana.es/ontology#representsThemes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Illustration> .
+<http://bdovidiana.es/ontology#representsThemes> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#PublicationPlace> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bdovidiana.es/ontology#approximateDateExpression
+<http://bdovidiana.es/ontology#approximateDateExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#approximateDateExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#dateExpression> .
+<http://bdovidiana.es/ontology#approximateDateExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ApproximateDate> .
+<http://bdovidiana.es/ontology#approximateDateExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#bibliography
+<http://bdovidiana.es/ontology#bibliography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#bibliography> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#bibliography> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#code
+<http://bdovidiana.es/ontology#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#dateExpression
+<http://bdovidiana.es/ontology#dateExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bdovidiana.es/ontology#descripcionIlustracion
+<http://bdovidiana.es/ontology#descripcionIlustracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#descripcionIlustracion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#EditionFeatures> .
+<http://bdovidiana.es/ontology#descripcionIlustracion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#editionCode
+<http://bdovidiana.es/ontology#editionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#editionCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#editionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+# 
+# http://bdovidiana.es/ontology#exactDateExpression
+<http://bdovidiana.es/ontology#exactDateExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#exactDateExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#dateExpression> .
+<http://bdovidiana.es/ontology#exactDateExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ExactDate> .
+<http://bdovidiana.es/ontology#exactDateExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://bdovidiana.es/ontology#historial
+<http://bdovidiana.es/ontology#historial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#historial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#historial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#libraryCode
+<http://bdovidiana.es/ontology#libraryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#libraryCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#libraryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Library> .
+<http://bdovidiana.es/ontology#libraryCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#locationOfIllustration
+<http://bdovidiana.es/ontology#locationOfIllustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#locationOfIllustration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Illustration> .
+<http://bdovidiana.es/ontology#locationOfIllustration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#name
+<http://bdovidiana.es/ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bdovidiana.es/ontology#notes
+<http://bdovidiana.es/ontology#notes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#notes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#notes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#originalTitle
+<http://bdovidiana.es/ontology#originalTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#originalTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Opus> .
+<http://bdovidiana.es/ontology#originalTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#physicalDescription
+<http://bdovidiana.es/ontology#physicalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#physicalDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#physicalDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#references
+<http://bdovidiana.es/ontology#references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://bdovidiana.es/ontology#sectionCode
+<http://bdovidiana.es/ontology#sectionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#sectionCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#sectionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Section> .
+<http://bdovidiana.es/ontology#sectionCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#shortCode
+<http://bdovidiana.es/ontology#shortCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#shortCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#shortCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Edition> .
+<http://bdovidiana.es/ontology#shortCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#signature
+<http://bdovidiana.es/ontology#signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#signature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+<http://bdovidiana.es/ontology#signature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#specimenCode
+<http://bdovidiana.es/ontology#specimenCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#specimenCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#specimenCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Specimen> .
+# 
+# http://bdovidiana.es/ontology#specimenNumber
+<http://bdovidiana.es/ontology#specimenNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#specimenNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://bdovidiana.es/ontology#specimenNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Library> .
+<http://bdovidiana.es/ontology#specimenNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://bdovidiana.es/ontology#structure
+<http://bdovidiana.es/ontology#structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#structure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#EditionFeatures> .
+<http://bdovidiana.es/ontology#structure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#text
+<http://bdovidiana.es/ontology#text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#text> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#EditionFeatures> .
+<http://bdovidiana.es/ontology#text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://bdovidiana.es/ontology#titulo
+<http://bdovidiana.es/ontology#titulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#titulo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+# 
+# http://bdovidiana.es/ontology#url
+<http://bdovidiana.es/ontology#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://bdovidiana.es/ontology#viafCode
+<http://bdovidiana.es/ontology#viafCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bdovidiana.es/ontology#viafCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#code> .
+<http://bdovidiana.es/ontology#viafCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://dbpedia.org/ontology/file
+<http://dbpedia.org/ontology/file> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dbpedia.org/ontology/file> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bdovidiana.es/ontology#locationOfIllustration> .
+<http://dbpedia.org/ontology/file> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#SpecimenIllustration> .
+<http://dbpedia.org/ontology/file> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Opus> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/addressCountry
+<http://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/latitude
+<http://schema.org/latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+# 
+# http://schema.org/longitude
+<http://schema.org/longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bdovidiana.es/ontology#ApproximateDate
+<http://bdovidiana.es/ontology#ApproximateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#ApproximateDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bdovidiana.es/ontology#Date> .
+# 
+# http://bdovidiana.es/ontology#Category
+<http://bdovidiana.es/ontology#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#City
+<http://bdovidiana.es/ontology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://bdovidiana.es/ontology#Community
+<http://bdovidiana.es/ontology#Community> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Community> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://bdovidiana.es/ontology#Date
+<http://bdovidiana.es/ontology#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#Edition
+<http://bdovidiana.es/ontology#Edition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#EditionFeatures
+<http://bdovidiana.es/ontology#EditionFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#ExactDate
+<http://bdovidiana.es/ontology#ExactDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#ExactDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bdovidiana.es/ontology#Date> .
+# 
+# http://bdovidiana.es/ontology#Illustration
+<http://bdovidiana.es/ontology#Illustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Illustration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
+# 
+# http://bdovidiana.es/ontology#Illustrator
+<http://bdovidiana.es/ontology#Illustrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Illustrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://bdovidiana.es/ontology#Index
+<http://bdovidiana.es/ontology#Index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Index> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#OrderedList> .
+# 
+# http://bdovidiana.es/ontology#Library
+<http://bdovidiana.es/ontology#Library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#LibraryLocation
+<http://bdovidiana.es/ontology#LibraryLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#ListOfEditionIllustrations
+<http://bdovidiana.es/ontology#ListOfEditionIllustrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#ListOfEditionIllustrations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#OrderedList> .
+# 
+# http://bdovidiana.es/ontology#ListOfSpecimenIllustrations
+<http://bdovidiana.es/ontology#ListOfSpecimenIllustrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#ListOfSpecimenIllustrations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bdovidiana.es/ontology#ListOfEditionIllustrations> .
+# 
+# http://bdovidiana.es/ontology#ListOfThemes
+<http://bdovidiana.es/ontology#ListOfThemes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#ListOfThemes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#OrderedList> .
+# 
+# http://bdovidiana.es/ontology#Opus
+<http://bdovidiana.es/ontology#Opus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Opus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+<http://bdovidiana.es/ontology#Opus> <http://www.w3.org/2000/01/rdf-schema#comment> "Cada una de las obras contenidas en el ejemplar"@es .
+# 
+# http://bdovidiana.es/ontology#Printer
+<http://bdovidiana.es/ontology#Printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Printer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://bdovidiana.es/ontology#Province
+<http://bdovidiana.es/ontology#Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Province> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://bdovidiana.es/ontology#PublicationPlace
+<http://bdovidiana.es/ontology#PublicationPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#PublicationPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://bdovidiana.es/ontology#Section
+<http://bdovidiana.es/ontology#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Section> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
+# 
+# http://bdovidiana.es/ontology#Specimen
+<http://bdovidiana.es/ontology#Specimen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://bdovidiana.es/ontology#SpecimenIllustration
+<http://bdovidiana.es/ontology#SpecimenIllustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#SpecimenIllustration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bdovidiana.es/ontology#Illustration> .
+# 
+# http://bdovidiana.es/ontology#Subject
+<http://bdovidiana.es/ontology#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
+# 
+# http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Place
+<http://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.europeana.eu/schemas/edm/ProvidedCHO
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://vocab.getty.edu/tgn/
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/created> "2014-06-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/created> "2014-08-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/creator> <http://www.ontotext.com> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/creator> <http://www.getty.edu/research/> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/issued> "2014-08-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/publisher> <http://www.getty.edu/research/> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/rightsHolder> <http://www.getty.edu/research/> .
+<http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/title> "Thesaurus of Geographic Names (TGN) (R) concept scheme" .
+<http://vocab.getty.edu/tgn/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tgn" .
+<http://vocab.getty.edu/tgn/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.getty.edu/tgn/" .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/2000/01/rdf-schema#comment> "The Thesaurus of Geographic Names concept scheme" .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/2000/01/rdf-schema#label> "Thesaurus of Geographic Names" .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://vocab.getty.edu/> .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://vocab.getty.edu/.well-known/void> .
+<http://vocab.getty.edu/tgn/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.getty.edu/research/tools/vocabularies/lod/> .
+<http://vocab.getty.edu/tgn/> <http://xmlns.com/foaf/0.1/homepage> <http://www.getty.edu/research/tools/vocabularies/tgn/> .
+<http://vocab.getty.edu/tgn/> <http://xmlns.com/foaf/0.1/maker> <http://www.getty.edu/research/> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Category> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#City> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Date> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Edition> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Illustration> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Illustrator> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Index> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Library> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Opus> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Printer> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Province> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#PublicationPlace> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Specimen> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Subject> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
