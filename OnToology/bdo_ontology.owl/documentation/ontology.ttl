@@ -1,0 +1,618 @@
+@prefix : <http://bdovidiana.es/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bdovidiana.es/ontology> .
+
+<http://bdovidiana.es/ontology> rdf:type owl:Ontology ;
+                                 owl:imports <http://purl.org/ontology/olo/core#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+<http://purl.org/dc/terms/rightsHolder> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bdovidiana.es/ontology#areRepresentedIn
+:areRepresentedIn rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ListOfThemes ;
+                  rdfs:range :Illustration .
+
+
+###  http://bdovidiana.es/ontology#city
+:city rdf:type owl:ObjectProperty ;
+      rdfs:domain :LibraryLocation ;
+      rdfs:range :City .
+
+
+###  http://bdovidiana.es/ontology#community
+:community rdf:type owl:ObjectProperty ;
+           rdfs:domain :LibraryLocation ;
+           rdfs:range :Community .
+
+
+###  http://bdovidiana.es/ontology#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://purl.org/ontology/olo/core#slot> ;
+          rdfs:domain :Index ;
+          rdfs:range :Section .
+
+
+###  http://bdovidiana.es/ontology#correspondsTo
+:correspondsTo rdf:type owl:ObjectProperty ;
+               rdfs:domain :SpecimenIllustration ;
+               rdfs:range :Illustration .
+
+
+###  http://bdovidiana.es/ontology#geo
+:geo rdf:type owl:ObjectProperty ;
+     rdfs:domain <http://schema.org/Place> ;
+     rdfs:range <http://schema.org/GeoCoordinates> .
+
+
+###  http://bdovidiana.es/ontology#hasEdition
+:hasEdition rdf:type owl:ObjectProperty ;
+            rdfs:domain :Opus ;
+            rdfs:range :Edition .
+
+
+###  http://bdovidiana.es/ontology#hasIllustration
+:hasIllustration rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://purl.org/ontology/olo/core#slot> ;
+                 rdfs:domain :ListOfEditionIllustrations ;
+                 rdfs:range :Illustration .
+
+
+###  http://bdovidiana.es/ontology#hasIllustrations
+:hasIllustrations rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Edition ;
+                  rdfs:range :ListOfEditionIllustrations .
+
+
+###  http://bdovidiana.es/ontology#hasIllustrator
+:hasIllustrator rdf:type owl:ObjectProperty ;
+                rdfs:domain :Edition ;
+                rdfs:range :Illustrator .
+
+
+###  http://bdovidiana.es/ontology#hasImpresor
+:hasImpresor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Edition ;
+             rdfs:range :Printer .
+
+
+###  http://bdovidiana.es/ontology#hasIndex
+:hasIndex rdf:type owl:ObjectProperty ;
+          rdfs:domain :Edition ;
+          rdfs:range :Index .
+
+
+###  http://bdovidiana.es/ontology#hasRelatedThemes
+:hasRelatedThemes rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://purl.org/ontology/olo/core#slot> ;
+                  rdfs:domain :ListOfThemes ;
+                  rdfs:range :Subject .
+
+
+###  http://bdovidiana.es/ontology#hasSpecimen
+:hasSpecimen rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isSpecimenOf ;
+             rdfs:domain :Edition ;
+             rdfs:range :Specimen .
+
+
+###  http://bdovidiana.es/ontology#isEdition
+:isEdition rdf:type owl:ObjectProperty ;
+           rdfs:domain :Edition ;
+           rdfs:range :Opus .
+
+
+###  http://bdovidiana.es/ontology#isIllustratorOf
+:isIllustratorOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Illustrator ;
+                 rdfs:range :Edition .
+
+
+###  http://bdovidiana.es/ontology#isInIllustrationList
+:isInIllustrationList rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/ontology/olo/core#ordered_list> ;
+                      rdfs:domain :Illustration ;
+                      rdfs:range :ListOfEditionIllustrations .
+
+
+###  http://bdovidiana.es/ontology#isInIndex
+:isInIndex rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://purl.org/ontology/olo/core#ordered_list> ;
+           rdfs:domain :Section ;
+           rdfs:range :Index .
+
+
+###  http://bdovidiana.es/ontology#isInSubjectList
+:isInSubjectList rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://purl.org/ontology/olo/core#ordered_list> ;
+                 rdfs:domain :Subject ;
+                 rdfs:range :ListOfThemes .
+
+
+###  http://bdovidiana.es/ontology#isListIllustrationOfSpecimen
+:isListIllustrationOfSpecimen rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isListIllustrationsOf ;
+                              rdfs:domain :ListOfSpecimenIllustrations ;
+                              rdfs:range :Specimen .
+
+
+###  http://bdovidiana.es/ontology#isListIllustrationsOf
+:isListIllustrationsOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain :ListOfEditionIllustrations ;
+                       rdfs:range :Edition .
+
+
+###  http://bdovidiana.es/ontology#isLocatedIn
+:isLocatedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Library ;
+             rdfs:range :LibraryLocation .
+
+
+###  http://bdovidiana.es/ontology#isSpecimenOf
+:isSpecimenOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Specimen ;
+              rdfs:range :Edition .
+
+
+###  http://bdovidiana.es/ontology#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Specimen ;
+           rdfs:range :Library .
+
+
+###  http://bdovidiana.es/ontology#province
+:province rdf:type owl:ObjectProperty ;
+          rdfs:domain :LibraryLocation ;
+          rdfs:range :Province .
+
+
+###  http://bdovidiana.es/ontology#publicationDate
+:publicationDate rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Edition ;
+                 rdfs:range :Date .
+
+
+###  http://bdovidiana.es/ontology#publishedIn
+:publishedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Edition ;
+             rdfs:range :PublicationPlace .
+
+
+###  http://bdovidiana.es/ontology#representsThemes
+:representsThemes rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Illustration ;
+                  rdfs:range :PublicationPlace .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://bdovidiana.es/ontology#approximateDateExpression
+:approximateDateExpression rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :dateExpression ;
+                           rdfs:domain :ApproximateDate ;
+                           rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#bibliography
+:bibliography rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Edition ;
+              rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#code
+:code rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#dateExpression
+:dateExpression rdf:type owl:DatatypeProperty .
+
+
+###  http://bdovidiana.es/ontology#descripcionIlustracion
+:descripcionIlustracion rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :EditionFeatures ;
+                        rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#editionCode
+:editionCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :code ;
+             rdfs:domain :Edition .
+
+
+###  http://bdovidiana.es/ontology#exactDateExpression
+:exactDateExpression rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :dateExpression ;
+                     rdfs:domain :ExactDate ;
+                     rdfs:range xsd:decimal .
+
+
+###  http://bdovidiana.es/ontology#historial
+:historial rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Specimen ;
+           rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#libraryCode
+:libraryCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :code ;
+             rdfs:domain :Library ;
+             rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#locationOfIllustration
+:locationOfIllustration rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Illustration ;
+                        rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  http://bdovidiana.es/ontology#notes
+:notes rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Specimen ;
+       rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#originalTitle
+:originalTitle rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Opus ;
+               rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#physicalDescription
+:physicalDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Specimen ;
+                     rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#references
+:references rdf:type owl:DatatypeProperty .
+
+
+###  http://bdovidiana.es/ontology#sectionCode
+:sectionCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :code ;
+             rdfs:domain :Section ;
+             rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#shortCode
+:shortCode rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :code ;
+           rdfs:domain :Edition ;
+           rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#signature
+:signature rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Specimen ;
+           rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#specimenCode
+:specimenCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :code ;
+              rdfs:domain :Specimen .
+
+
+###  http://bdovidiana.es/ontology#specimenNumber
+:specimenNumber rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Library ;
+                rdfs:range xsd:integer .
+
+
+###  http://bdovidiana.es/ontology#structure
+:structure rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EditionFeatures ;
+           rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#text
+:text rdf:type owl:DatatypeProperty ;
+      rdfs:domain :EditionFeatures ;
+      rdfs:range xsd:string .
+
+
+###  http://bdovidiana.es/ontology#titulo
+:titulo rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> .
+
+
+###  http://bdovidiana.es/ontology#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:anyURI .
+
+
+###  http://bdovidiana.es/ontology#viafCode
+:viafCode rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :code ;
+          rdfs:range xsd:anyURI .
+
+
+###  http://dbpedia.org/ontology/file
+<http://dbpedia.org/ontology/file> rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf :locationOfIllustration ;
+                                   rdfs:domain :SpecimenIllustration ;
+                                   rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :Opus ;
+                                              rdfs:range xsd:string .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty .
+
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain <http://schema.org/GeoCoordinates> ;
+                            rdfs:range xsd:string .
+
+
+###  http://schema.org/addressCountry
+<http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://schema.org/GeoCoordinates> ;
+                                   rdfs:range xsd:string .
+
+
+###  http://schema.org/latitude
+<http://schema.org/latitude> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/GeoCoordinates> .
+
+
+###  http://schema.org/longitude
+<http://schema.org/longitude> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/GeoCoordinates> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bdovidiana.es/ontology#ApproximateDate
+:ApproximateDate rdf:type owl:Class ;
+                 rdfs:subClassOf :Date .
+
+
+###  http://bdovidiana.es/ontology#Category
+:Category rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://bdovidiana.es/ontology#Community
+:Community rdf:type owl:Class ;
+           rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://bdovidiana.es/ontology#Date
+:Date rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#Edition
+:Edition rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#EditionFeatures
+:EditionFeatures rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#ExactDate
+:ExactDate rdf:type owl:Class ;
+           rdfs:subClassOf :Date .
+
+
+###  http://bdovidiana.es/ontology#Illustration
+:Illustration rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/ontology/olo/core#Slot> .
+
+
+###  http://bdovidiana.es/ontology#Illustrator
+:Illustrator rdf:type owl:Class ;
+             rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://bdovidiana.es/ontology#Index
+:Index rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.org/ontology/olo/core#OrderedList> .
+
+
+###  http://bdovidiana.es/ontology#Library
+:Library rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#LibraryLocation
+:LibraryLocation rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#ListOfEditionIllustrations
+:ListOfEditionIllustrations rdf:type owl:Class ;
+                            rdfs:subClassOf <http://purl.org/ontology/olo/core#OrderedList> .
+
+
+###  http://bdovidiana.es/ontology#ListOfSpecimenIllustrations
+:ListOfSpecimenIllustrations rdf:type owl:Class ;
+                             rdfs:subClassOf :ListOfEditionIllustrations .
+
+
+###  http://bdovidiana.es/ontology#ListOfThemes
+:ListOfThemes rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/ontology/olo/core#OrderedList> .
+
+
+###  http://bdovidiana.es/ontology#Opus
+:Opus rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.europeana.eu/schemas/edm/ProvidedCHO> ;
+      rdfs:comment "Cada una de las obras contenidas en el ejemplar"@es .
+
+
+###  http://bdovidiana.es/ontology#Printer
+:Printer rdf:type owl:Class ;
+         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://bdovidiana.es/ontology#Province
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://bdovidiana.es/ontology#PublicationPlace
+:PublicationPlace rdf:type owl:Class ;
+                  rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://bdovidiana.es/ontology#Section
+:Section rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/ontology/olo/core#Slot> .
+
+
+###  http://bdovidiana.es/ontology#Specimen
+:Specimen rdf:type owl:Class .
+
+
+###  http://bdovidiana.es/ontology#SpecimenIllustration
+:SpecimenIllustration rdf:type owl:Class ;
+                      rdfs:subClassOf :Illustration .
+
+
+###  http://bdovidiana.es/ontology#Subject
+:Subject rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/ontology/olo/core#Slot> .
+
+
+###  http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> rdf:type owl:Class .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
+
+
+###  http://www.europeana.eu/schemas/edm/ProvidedCHO
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.org/ontology/olo/core#Slot> .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.getty.edu/tgn/
+<http://vocab.getty.edu/tgn/> rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                              <http://purl.org/dc/terms/created> "2014-06-15"^^xsd:date ,
+                                                                 "2014-08-12"^^xsd:date ;
+                              <http://purl.org/dc/terms/creator> <http://www.ontotext.com> ,
+                                                                 <http://www.getty.edu/research/> ;
+                              <http://purl.org/dc/terms/issued> "2014-08-12"^^xsd:date ;
+                              <http://purl.org/dc/terms/publisher> <http://www.getty.edu/research/> ;
+                              <http://purl.org/dc/terms/rightsHolder> <http://www.getty.edu/research/> ;
+                              <http://purl.org/dc/terms/title> "Thesaurus of Geographic Names (TGN) (R) concept scheme" ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "tgn" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.getty.edu/tgn/" ;
+                              rdfs:comment "The Thesaurus of Geographic Names concept scheme" ;
+                              rdfs:label "Thesaurus of Geographic Names" ;
+                              rdfs:seeAlso <http://vocab.getty.edu/> ,
+                                           <http://vocab.getty.edu/.well-known/void> ,
+                                           <http://www.getty.edu/research/tools/vocabularies/lod/> ;
+                              <http://xmlns.com/foaf/0.1/homepage> <http://www.getty.edu/research/tools/vocabularies/tgn/> ;
+                              <http://xmlns.com/foaf/0.1/maker> <http://www.getty.edu/research/> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Category
+                :City
+                :Date
+                :Edition
+                :Illustration
+                :Illustrator
+                :Index
+                :Library
+                :Opus
+                :Printer
+                :Province
+                :PublicationPlace
+                :Specimen
+                :Subject
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
