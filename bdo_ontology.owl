@@ -5,6 +5,7 @@
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:bdo="http://bdovidiana.es/ontology#"
      xmlns:edm="http://www.europeana.eu/schemas/edm/"
+     xmlns:ns1="http://creativecommons.org/ns#"
      xmlns:olo="http://purl.org/ontology/olo/core#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,6 +18,17 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://bdovidiana.es/ontology">
         <owl:imports rdf:resource="http://purl.org/ontology/olo/core#"/>
+        <ns1:license>https://creativecommons.org/licenses/by/4.0/</ns1:license>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</dc:date>
+        <dc:description xml:lang="es">Esta ontología cubre  todos las entidades y propiedades que modelan la información recopilada en la BIblioteca Digital Ovidiana.
+Cabe  destacar  las clases bdo:Opus, bdo: Edition y bdo:Specimen que representan a la obra, la edición y el ejemplar, respectivamente.</dc:description>
+        <dc:description xml:lang="en">This ontology covers all the entities and properties that model the information collected in the Ovidian Digital Library.
+The classes bdo:Opus, bdo: Edition and bdo:Specimen that represent the work, the edition and the copy, respectively, should be highlighted.</dc:description>
+        <dc:title xml:lang="es">Ontología de la Biblioteca Digital Ovidiana</dc:title>
+        <dc:title xml:lang="en">Ovidian Digital Library Ontology</dc:title>
+        <terms:creator>Mª Luisa Díez Platas --&lt; https://orcid.org/0000-0002-9416-3147&gt;</terms:creator>
+        <vann:preferredNamespacePrefix>bdo</vann:preferredNamespacePrefix>
+        <owl:versionInfo>V1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -32,6 +44,12 @@
     
 
 
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
@@ -44,9 +62,33 @@
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
     <!-- http://purl.org/dc/terms/rightsHolder -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
@@ -59,6 +101,23 @@
     <!-- http://xmlns.com/foaf/0.1/maker -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/maker"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -188,7 +247,7 @@
     <owl:ObjectProperty rdf:about="http://bdovidiana.es/ontology#hasRelatedThemes">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/olo/core#slot"/>
         <rdfs:domain rdf:resource="http://bdovidiana.es/ontology#ListOfThemes"/>
-        <rdfs:range rdf:resource="http://bdovidiana.es/ontology#Subject"/>
+        <rdfs:range rdf:resource="http://bdovidiana.es/ontology#Theme"/>
     </owl:ObjectProperty>
     
 
@@ -245,7 +304,7 @@
 
     <owl:ObjectProperty rdf:about="http://bdovidiana.es/ontology#isInSubjectList">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/olo/core#ordered_list"/>
-        <rdfs:domain rdf:resource="http://bdovidiana.es/ontology#Subject"/>
+        <rdfs:domain rdf:resource="http://bdovidiana.es/ontology#Theme"/>
         <rdfs:range rdf:resource="http://bdovidiana.es/ontology#ListOfThemes"/>
     </owl:ObjectProperty>
     
@@ -804,9 +863,9 @@
     
 
 
-    <!-- http://bdovidiana.es/ontology#Subject -->
+    <!-- http://bdovidiana.es/ontology#Theme -->
 
-    <owl:Class rdf:about="http://bdovidiana.es/ontology#Subject">
+    <owl:Class rdf:about="http://bdovidiana.es/ontology#Theme">
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/olo/core#Slot"/>
     </owl:Class>
     
@@ -861,10 +920,17 @@
     
 
 
+    <!-- http://bdovidiana.es/ontology/theme -->
+
+    <owl:NamedIndividual rdf:about="http://bdovidiana.es/ontology/theme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vocab.getty.edu/tgn/ -->
 
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/tgn/">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-15</terms:created>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-12</terms:created>
         <terms:creator rdf:resource="http://www.ontotext.com"/>
@@ -910,7 +976,7 @@
             <rdf:Description rdf:about="http://bdovidiana.es/ontology#Province"/>
             <rdf:Description rdf:about="http://bdovidiana.es/ontology#PublicationPlace"/>
             <rdf:Description rdf:about="http://bdovidiana.es/ontology#Specimen"/>
-            <rdf:Description rdf:about="http://bdovidiana.es/ontology#Subject"/>
+            <rdf:Description rdf:about="http://bdovidiana.es/ontology#Theme"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

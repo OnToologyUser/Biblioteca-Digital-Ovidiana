@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1593082661854" name="http://bdovidiana.es/ontology" uri="bdo_ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593082661854" name="shadowed:http://bdovidiana.es/ontology" uri="OnToology/bdo_ontology.owl/documentation/ontology.xml"/>
+    </group>
+</catalog>
