@@ -1,12 +1,12 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "bdo:Date" "bdo:Printer" "bdo:ListOfEditionIllustrations" "bdo:ListOfThemes" "bdo:Subject" "bdo:Index" "bdo:Province" "bdo:PublicationPlace" "bdo:ListOfSpecimenIllustrations" "bdo:Illustrator" "bdo:Section" "foaf:Person" "bdo:SpecimenIllustration" "edm:ProvidedCHO" "bdo:ApproximateDate" "bdo:ExactDate" "bdo:Community" "skos:Concept" "bdo:Opus" "bdo:City" "http://schema.org/Place" "bdo:Illustration" "olo:Slot" "olo:OrderedList" ; /*classes style*/
+node [shape = rectangle, color="black"]; "bdo:Date" "bdo:Printer" "bdo:ListOfEditionIllustrations" "bdo:ListOfThemes" "bdo:Index" "bdo:Province" "bdo:PublicationPlace" "bdo:ListOfSpecimenIllustrations" "bdo:Illustrator" "bdo:Section" "foaf:Person" "bdo:SpecimenIllustration" "edm:ProvidedCHO" "bdo:ApproximateDate" "bdo:ExactDate" "bdo:Community" "skos:Concept" "bdo:Opus" "http://schema.org/Place" "bdo:City" "bdo:Theme" "bdo:Illustration" "olo:Slot" "olo:OrderedList" ; /*classes style*/
 	"skos:Concept" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
 	"bdo:ExactDate" -> "bdo:Date" [ label = "rdfs:subClassOf" ];
 	"bdo:ListOfEditionIllustrations" -> "olo:OrderedList" [ label = "rdfs:subClassOf" ];
+	"bdo:Theme" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
 	"bdo:Section" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
-	"bdo:Subject" -> "olo:Slot" [ label = "rdfs:subClassOf" ];
 	"bdo:Opus" -> "edm:ProvidedCHO" [ label = "rdfs:subClassOf" ];
 	"olo:Slot" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
 	"bdo:ListOfThemes" -> "olo:OrderedList" [ label = "rdfs:subClassOf" ];

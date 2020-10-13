@@ -1,5 +1,14 @@
 <http://bdovidiana.es/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://bdovidiana.es/ontology> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/ontology/olo/core#> .
+<http://bdovidiana.es/ontology> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by/4.0/" .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/elements/1.1/date> "2019"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/elements/1.1/description> "Esta ontología cubre  todos las entidades y propiedades que modelan la información recopilada en la BIblioteca Digital Ovidiana.\nCabe  destacar  las clases bdo:Opus, bdo: Edition y bdo:Specimen que representan a la obra, la edición y el ejemplar, respectivamente."@es .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/elements/1.1/description> "This ontology covers all the entities and properties that model the information collected in the Ovidian Digital Library.\nThe classes bdo:Opus, bdo: Edition and bdo:Specimen that represent the work, the edition and the copy, respectively, should be highlighted."@en .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/elements/1.1/title> "Ontología de la Biblioteca Digital Ovidiana"@es .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/elements/1.1/title> "Ovidian Digital Library Ontology"@en .
+<http://bdovidiana.es/ontology> <http://purl.org/dc/terms/creator> "Mª Luisa Díez Platas --< https://orcid.org/0000-0002-9416-3147>" .
+<http://bdovidiana.es/ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bdo" .
+<http://bdovidiana.es/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "V1.0" .
 # 
 # 
 # #################################################################
@@ -8,6 +17,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -26,6 +38,9 @@
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -120,7 +135,7 @@
 <http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#slot> .
 <http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#ListOfThemes> .
-<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Subject> .
+<http://bdovidiana.es/ontology#hasRelatedThemes> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#Theme> .
 # 
 # http://bdovidiana.es/ontology#hasSpecimen
 <http://bdovidiana.es/ontology#hasSpecimen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -153,7 +168,7 @@
 # http://bdovidiana.es/ontology#isInSubjectList
 <http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/olo/core#ordered_list> .
-<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Subject> .
+<http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bdovidiana.es/ontology#Theme> .
 <http://bdovidiana.es/ontology#isInSubjectList> <http://www.w3.org/2000/01/rdf-schema#range> <http://bdovidiana.es/ontology#ListOfThemes> .
 # 
 # http://bdovidiana.es/ontology#isListIllustrationOfSpecimen
@@ -460,9 +475,9 @@
 <http://bdovidiana.es/ontology#SpecimenIllustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bdovidiana.es/ontology#SpecimenIllustration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bdovidiana.es/ontology#Illustration> .
 # 
-# http://bdovidiana.es/ontology#Subject
-<http://bdovidiana.es/ontology#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bdovidiana.es/ontology#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
+# http://bdovidiana.es/ontology#Theme
+<http://bdovidiana.es/ontology#Theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bdovidiana.es/ontology#Theme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#Slot> .
 # 
 # http://schema.org/GeoCoordinates
 <http://schema.org/GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -492,9 +507,12 @@
 # #################################################################
 # 
 # 
+# http://bdovidiana.es/ontology/theme
+<http://bdovidiana.es/ontology/theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bdovidiana.es/ontology/theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
 # http://vocab.getty.edu/tgn/
 <http://vocab.getty.edu/tgn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.getty.edu/tgn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/created> "2014-06-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/created> "2014-08-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.getty.edu/tgn/> <http://purl.org/dc/terms/creator> <http://www.ontotext.com> .
@@ -564,7 +582,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Specimen> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Subject> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bdovidiana.es/ontology#Theme> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

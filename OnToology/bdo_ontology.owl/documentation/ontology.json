@@ -29,14 +29,44 @@
     }, {
       "@id" : "http://bdovidiana.es/ontology#Specimen"
     }, {
-      "@id" : "http://bdovidiana.es/ontology#Subject"
+      "@id" : "http://bdovidiana.es/ontology#Theme"
     } ]
   } ]
 }, {
   "@id" : "http://bdovidiana.es/ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2019"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "es",
+    "@value" : "Esta ontología cubre  todos las entidades y propiedades que modelan la información recopilada en la BIblioteca Digital Ovidiana.\nCabe  destacar  las clases bdo:Opus, bdo: Edition y bdo:Specimen que representan a la obra, la edición y el ejemplar, respectivamente."
+  }, {
+    "@language" : "en",
+    "@value" : "This ontology covers all the entities and properties that model the information collected in the Ovidian Digital Library.\nThe classes bdo:Opus, bdo: Edition and bdo:Specimen that represent the work, the edition and the copy, respectively, should be highlighted."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de la Biblioteca Digital Ovidiana"
+  }, {
+    "@language" : "en",
+    "@value" : "Ovidian Digital Library Ontology"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Mª Luisa Díez Platas --< https://orcid.org/0000-0002-9416-3147>"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "bdo"
+  } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://purl.org/ontology/olo/core#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "V1.0"
   } ]
 }, {
   "@id" : "http://bdovidiana.es/ontology#ApproximateDate",
@@ -160,7 +190,7 @@
     "@id" : "http://bdovidiana.es/ontology#Illustration"
   } ]
 }, {
-  "@id" : "http://bdovidiana.es/ontology#Subject",
+  "@id" : "http://bdovidiana.es/ontology#Theme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/ontology/olo/core#Slot"
@@ -346,7 +376,7 @@
     "@id" : "http://bdovidiana.es/ontology#ListOfThemes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bdovidiana.es/ontology#Subject"
+    "@id" : "http://bdovidiana.es/ontology#Theme"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/olo/core#slot"
@@ -418,7 +448,7 @@
   "@id" : "http://bdovidiana.es/ontology#isInSubjectList",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bdovidiana.es/ontology#Subject"
+    "@id" : "http://bdovidiana.es/ontology#Theme"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://bdovidiana.es/ontology#ListOfThemes"
@@ -658,6 +688,12 @@
     "@id" : "http://bdovidiana.es/ontology#code"
   } ]
 }, {
+  "@id" : "http://bdovidiana.es/ontology/theme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://dbpedia.org/ontology/file",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -700,6 +736,9 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://schema.org/GeoCoordinates",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -737,7 +776,7 @@
   } ]
 }, {
   "@id" : "http://vocab.getty.edu/tgn/",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2014-06-15"
